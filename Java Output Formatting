@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+public class Solution {
+
+    public static void main(String[] args) {
+            Scanner sc=new Scanner(System.in);
+            System.out.println("================================");
+            for(int i=0;i<3;i++)
+            {
+                String s1=sc.next();
+                int x=sc.nextInt();
+                String format = "%1$-10s     %2$-10s\n";
+                //String format="%s     %2$-10s\n";
+                if(x<10){
+                    String s = Integer.toString(x);
+                    s="00"+s;
+                    System.out.format(format, s1,s);
+                    //System.out.println(s1+"     ",StringUtils.center(s, 10));
+                }
+                else if(x<100){
+                    String s = Integer.toString(x);
+                    s="0"+s;
+                    System.out.format(format, s1,s);
+                    //System.out.println(s1+"     ",StringUtils.center(s, 10));
+                }
+                else{
+                    System.out.format(format, s1,x);
+                    //System.out.println(s1+"     ",StringUtils.center(x, 10));
+                }
+                
+                //Complete this line
+            }
+            System.out.println("================================");
+
+    }
+}
+
+
+
